@@ -37,7 +37,7 @@
                   </table>
 
                   <a href="#" id="vaciar-carrito" class="button-vaciar">Vaciar Carrito</a>
-                  <a href="{{route('carrito')}}" id="procesar-pedido" class="button-pedido">Procesar Compra</a>
+                  <a href="{{route('/carrito')}}" id="procesar-pedido" class="button-pedido">Procesar Compra</a>
               </div>
             </li>
           </ul>
@@ -137,7 +137,7 @@
           <div class="row-footer">
               <div class="col-xl-6 col-lg-6 text-center text-lg-left">
                   <div class="copyright-text">
-                      <p>Copyright &copy; 2020, todos los derechos reservados <a href="index.html">Tasty Donut's</a></p>
+                      <p>Copyright &copy; 2024, todos los derechos reservados <a href="index.html">Tasty Donut's</a></p>
                   </div>
               </div>
               <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">

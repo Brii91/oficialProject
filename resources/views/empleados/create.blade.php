@@ -1,6 +1,6 @@
 @extends('layouts.app')
   
-@section('title', 'Create Empleado')
+@section('title', 'Crear empleado')
   
 @section('contents')
     <h1 class="mb-0">Agregar empleado</h1>

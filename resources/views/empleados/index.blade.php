@@ -26,8 +26,8 @@
             </tr>
         </thead>
         <tbody>+
-            @if($empleado->count() > 0)
-                @foreach($empleado as $rs)
+            @if($empleados->count() > 0)
+                @foreach($empleados as $rs)
                     <tr>
                         <td class="align-middle">{{ $loop->iteration }}</td>
                         <td class="align-middle">{{ $rs->nombres }}</td>

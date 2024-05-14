@@ -62,9 +62,11 @@ Route::get('/form', [\App\Http\Controllers\FormController::class, 'index'])->nam
 Route::get('/tienda', [\App\Http\Controllers\tiendaController::class, 'index'])->name('tienda');
 Route::get('auth/register', [\App\Http\Controllers\AuthController::class, 'register'])->name('register');
 Route::get('/productos', [\App\Http\Controllers\productosController::class, 'index'])->name('productos');
-Route::get('/products', [\App\Http\Controllers\ProductsController::class, 'index'])->name('products');
+Route::get('/products', [\App\Http\Controllers\ProductController::class, 'index'])->name('products');
 Route::get('/empleados', [\App\Http\Controllers\EmpleadoController::class, 'index'])->name('empleados');
 Route::get('/carrito', [\App\Http\Controllers\CarritoController::class, 'index'])->name('carrito');
+Route::post('carrito', 'CarritoController@store');
+
 
 });
 

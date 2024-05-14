@@ -10,11 +10,12 @@ class EmpleadoController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        $empleado = Empleado::orderBy('created_at', 'DESC')->get(); 
-        return view('empleados.index', compact('empleados'));       
-    }
+public function index()
+{
+    $empleados = Empleado::orderBy('created_at', 'DESC')->get(); 
+    return view('empleados.index', compact('empleados'));       
+}
+
 
     /**
      * Show the form for creating a new resource.
@@ -37,12 +38,14 @@ class EmpleadoController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
-    {
-        $empleado = Empleado::findOrFail($id);
-  
-        return view('empleado.show', compact('empleado'));
-    }
+public function show(string $id)
+{
+    $empleado = Empleado::findOrFail($id);
+
+    return view('empleados.show', compact('empleado'));
+}
+
+
   
     /**
      * Show the form for editing the specified resource.
@@ -51,7 +54,7 @@ class EmpleadoController extends Controller
     {
         $empleado = Empleado::findOrFail($id);
   
-        return view('empleado.edit', compact('empleado'));
+        return view('empleados.edit', compact('empleado'));
     }
   
     /**
@@ -63,7 +66,7 @@ class EmpleadoController extends Controller
   
         $empleado->update($request->all());
   
-        return redirect()->route('empleado')->with('success', 'empleado actualizado correctamente');
+        return redirect()->route('empleados')->with('success', 'empleado actualizado correctamente');
     }
   
     /**
@@ -78,3 +81,4 @@ class EmpleadoController extends Controller
         return redirect()->route('empleados')->with('success', 'empleado eliminado correctamente');
     }
 }
+
