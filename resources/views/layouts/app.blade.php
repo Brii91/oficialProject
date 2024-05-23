@@ -15,6 +15,7 @@
   <link href="{{ asset('admin_assets/css/sb-admin-2.min.css') }}" rel="stylesheet">
 </head>
 <body id="page-top">
+  
   <!-- Page Wrapper -->
   <div id="wrapper">
   
@@ -27,7 +28,7 @@
   
       <!-- Main Content -->
       <div id="content">
-  
+    
         <!-- Topbar -->
         @include('layouts.navbar')
         <!-- End of Topbar -->
@@ -39,6 +40,7 @@
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">@yield('title')</h1>
           </div>
+          
   
           @yield('contents')
   
@@ -51,9 +53,6 @@
       </div>
       <!-- End of Main Content -->
   
-      <!-- Footer -->
-      @include('layouts.footer')
-      <!-- End of Footer -->
   
     </div>
     <!-- End of Content Wrapper -->
@@ -75,5 +74,8 @@
   <script src="{{ asset('admin_assets/js/sb-admin-2.min.js') }}"></script>
   <!-- Page level plugins -->
   <script src="{{ asset('admin_assets/vendor/chart.js/Chart.min.js') }}"></script>
+  <!-- Page level custom scripts -->
+<script src="{{ asset('js/chart-area-demo.js') }}"></script>
+<script src="{{ asset('js/chart-pie-demo.js') }}"></script>
 </body>
 </html>

@@ -24,7 +24,7 @@
           <div class="col-lg-7">
             <div class="p-5">
               <div class="text-center">
-                <h1 class="h4 text-gray-900 mb-4">Crea una cuenta!</h1>
+                <h1 class="h4 text-gray-900 mb-4">¡Crea una cuenta!</h1>
               </div>
               <form action="{{ route('register.save') }}" method="POST" class="user">
                 @csrf
@@ -35,7 +35,7 @@
                   @enderror
                 </div>
                 <div class="form-group">
-                  <input name="email" type="email" class="form-control form-control-user @error('email')is-invalid @enderror" id="exampleInputEmail" placeholder="Gmail">
+                  <input name="email" type="email" class="form-control form-control-user @error('email')is-invalid @enderror" id="exampleInputEmail" placeholder="Correo electrónico">
                   @error('email')
                     <span class="invalid-feedback">{{ $message }}</span>
                   @enderror

@@ -1,7 +1,7 @@
 @extends('layouts.app')
-  
+
 @section('title', 'Crear producto')
-  
+
 @section('contents')
     <h1 class="mb-0">Agregar producto</h1>
     <hr />
@@ -9,18 +9,18 @@
         @csrf
         <div class="row mb-3">
             <div class="col">
-                <input type="text" name="title" class="form-control" placeholder="Titulo">
+                <input type="text" name="title" class="form-control" placeholder="Titulo" required>
             </div>
             <div class="col">
-                <input type="text" name="price" class="form-control" placeholder="Precio">
+                <input type="number" name="price" class="form-control" placeholder="Precio" required>
             </div>
         </div>
         <div class="row mb-3">
             <div class="col">
-                <input type="text" name="product_code" class="form-control" placeholder="Codigo del producto">
+                <input type="text" name="product_code" id="product_code" class="form-control" placeholder="Codigo del producto" readonly>
             </div>
             <div class="col">
-                <textarea class="form-control" name="description" placeholder="Descripcion"></textarea>
+                <textarea class="form-control" name="description" placeholder="Descripcion" required></textarea>
             </div>
         </div>
  
@@ -30,4 +30,22 @@
             </div>
         </div>
     </form>
+
+    <script>
+        // Function to generate a random product code
+        function generateProductCode() {
+            const length = 10;
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            let code = '';
+            for (let i = 0; i < length; i++) {
+                code += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            return code;
+        }
+
+        // Automatically fill the product code field when the page loads
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.getElementById('product_code').value = generateProductCode();
+        });
+    </script>
 @endsection

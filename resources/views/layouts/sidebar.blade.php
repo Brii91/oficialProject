@@ -17,6 +17,30 @@
       <i class="fas fa-fw fa-tachometer-alt"></i>
       <span>Dashboard</span></a>
   </li>
+
+  <li class="nav-item">
+    <a class="nav-link" href="{{ route('clientes') }}">
+      <i class="fas fa-fw fa-tachometer-alt"></i>
+      <span>Cliente</span></a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link" href="{{ route('empleados') }}">
+      <i class="fas fa-fw fa-tachometer-alt"></i>
+      <span>Empleado</span></a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link" href="{{ route('proveedores') }}">
+      <i class="fas fa-fw fa-tachometer-alt"></i>
+      <span>Proveedor</span></a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link" href="{{ route('toppings') }}">
+      <i class="fas fa-fw fa-tachometer-alt"></i>
+      <span>Topping</span></a>
+  </li>
   
   <li class="nav-item">
     <a class="nav-link" href="{{ route('products') }}">
@@ -25,9 +49,9 @@
   </li>
 
   <li class="nav-item">
-    <a class="nav-link" href="{{ route('empleados') }}">
+    <a class="nav-link" href="{{ route('facturas') }}">
       <i class="fas fa-fw fa-tachometer-alt"></i>
-      <span>Empleado</span></a>
+      <span>Factura</span></a>
   </li>
   
   <li class="nav-item">

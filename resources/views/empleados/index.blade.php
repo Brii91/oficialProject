@@ -23,6 +23,7 @@
                 <th>Cedula</th>
                 <th>Correo</th>
                 <th>Telefono</th>
+                <th>Accion</th>
             </tr>
         </thead>
         <tbody>+

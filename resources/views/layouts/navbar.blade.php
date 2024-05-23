@@ -5,17 +5,7 @@
     <i class="fa fa-bars"></i>
   </button>
   
-  <!-- Topbar Search -->
-  <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-    <div class="input-group">
-      <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-      <div class="input-group-append">
-        <button class="btn btn-primary" type="button">
-          <i class="fas fa-search fa-sm"></i>
-        </button>
-      </div>
-    </div>
-  </form>
+ 
   
   <!-- Topbar Navbar -->
   <ul class="navbar-nav ml-auto">
@@ -45,12 +35,12 @@
       <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <i class="fas fa-bell fa-fw"></i>
         <!-- Counter - Alerts -->
-        <span class="badge badge-danger badge-counter">3+</span>
+        <span class="badge badge-danger badge-counter">3</span>
       </a>
       <!-- Dropdown - Alerts -->
       <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
         <h6 class="dropdown-header">
-          Alerts Center
+          Centro de alertas
         </h6>
         <a class="dropdown-item d-flex align-items-center" href="#">
           <div class="mr-3">
@@ -59,8 +49,8 @@
             </div>
           </div>
           <div>
-            <div class="small text-gray-500">December 12, 2019</div>
-            <span class="font-weight-bold">A new monthly report is ready to download!</span>
+            <div class="small text-gray-500">Enero 20, 2024</div>
+            <span class="font-weight-bold">¡Un nuevo informe mensual está listo para descargar!</span>
           </div>
         </a>
         <a class="dropdown-item d-flex align-items-center" href="#">
@@ -70,8 +60,9 @@
             </div>
           </div>
           <div>
-            <div class="small text-gray-500">December 7, 2019</div>
-            $290.29 has been deposited into your account!
+            <div class="small text-gray-500">Febrero 02, 2024</div>
+            ¡Se han depositado $290.29 en su cuenta!
+
           </div>
         </a>
         <a class="dropdown-item d-flex align-items-center" href="#">
@@ -81,11 +72,10 @@
             </div>
           </div>
           <div>
-            <div class="small text-gray-500">December 2, 2019</div>
-            Spending Alert: We've noticed unusually high spending for your account.
+            <div class="small text-gray-500">Mayo 10, 2024</div>
+            Alerta de gastos: Hemos notado gastos inusualmente altos en su cuenta.
           </div>
         </a>
-        <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
       </div>
     </li>
   
@@ -99,7 +89,7 @@
       <!-- Dropdown - Messages -->
       <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
         <h6 class="dropdown-header">
-          Message Center
+          Centro de mensajes
         </h6>
         <a class="dropdown-item d-flex align-items-center" href="#">
           <div class="dropdown-list-image mr-3">
@@ -107,9 +97,9 @@
             <div class="status-indicator bg-success"></div>
           </div>
           <div class="font-weight-bold">
-            <div class="text-truncate">Hi there! I am wondering if you can help me with a
-              problem I've been having.</div>
-            <div class="small text-gray-500">Emily Fowler · 58m</div>
+            <div class="text-truncate">¡Hola! Me pregunto si me pueden ayudar con un
+              problema que he estado teniendo.</div>
+            <div class="small text-gray-500">Mederlin Franco</div>
           </div>
         </a>
         <a class="dropdown-item d-flex align-items-center" href="#">
@@ -118,9 +108,9 @@
             <div class="status-indicator"></div>
           </div>
           <div>
-            <div class="text-truncate">I have the photos that you ordered last month, how
-              would you like them sent to you?</div>
-            <div class="small text-gray-500">Jae Chun · 1d</div>
+            <div class="text-truncate">Tengo las fotos que ordenaste el mes pasado, ¿cómo?
+              ¿Quieres que te los envíen?</div>
+            <div class="small text-gray-500">Yirlin Carrasco</div>
           </div>
         </a>
         <a class="dropdown-item d-flex align-items-center" href="#">
@@ -129,9 +119,9 @@
             <div class="status-indicator bg-warning"></div>
           </div>
           <div>
-            <div class="text-truncate">Last month's report looks great, I am very happy with
-              the progress so far, keep up the good work!</div>
-            <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+            <div class="text-truncate">El informe del mes pasado parece fantástico, estoy muy contento con
+              El progreso hasta ahora, ¡sigan con el buen trabajo!</div>
+            <div class="small text-gray-500">Gustavo Polanco</div>
           </div>
         </a>
         <a class="dropdown-item d-flex align-items-center" href="#">
@@ -140,12 +130,11 @@
             <div class="status-indicator bg-success"></div>
           </div>
           <div>
-            <div class="text-truncate">Am I a good boy? The reason I ask is because someone
-              told me that people say this to all dogs, even if they aren't good...</div>
-            <div class="small text-gray-500">Chicken the Dog · 2w</div>
+            <div class="text-truncate">Su atención al cliente y presentación impecable hacen 
+              que cada visita sea una experiencia inolvidable</div>
+            <div class="small text-gray-500">Brian Polanco</div>
           </div>
         </a>
-        <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
       </div>
     </li>
   
@@ -165,20 +154,20 @@
       <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
         <a class="dropdown-item" href="/profile">
           <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-          Profile
+          Perfil
         </a>
         <a class="dropdown-item" href="#">
           <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-          Settings
+          Configuración
         </a>
         <a class="dropdown-item" href="#">
           <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-          Activity Log
+          Registro de actividades
         </a>
         <div class="dropdown-divider"></div>
         <a class="dropdown-item" href="{{ route('logout') }}">
           <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-          Logout
+          Cerrar sesión
         </a>
       </div>
     </li>

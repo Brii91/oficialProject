@@ -66,7 +66,7 @@ public function show(string $id)
   
         $empleado->update($request->all());
   
-        return redirect()->route('empleados')->with('success', 'empleado actualizado correctamente');
+        return redirect()->route('empleados')->with('success', 'Empleado actualizado correctamente');
     }
   
     /**
@@ -78,7 +78,7 @@ public function show(string $id)
   
         $empleado->delete();
   
-        return redirect()->route('empleados')->with('success', 'empleado eliminado correctamente');
+        return redirect()->route('empleados')->with('success', 'Empleado eliminado correctamente');
     }
 }
 

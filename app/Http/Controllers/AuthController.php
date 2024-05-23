@@ -55,7 +55,7 @@ class AuthController extends Controller
         $request->session()->regenerate();
   
         return redirect()->route('dashboard');
-    }
+        }
   
     public function logout(Request $request)
     {
@@ -74,6 +74,18 @@ class AuthController extends Controller
          {
              // Tu lógica para manejar "productos" aquí
              return view('productos.index');
+         }
+
+         public function toppings() 
+         {
+             // Tu lógica para manejar "toppings" aquí
+             return view('toppings.index');
+         }
+
+         public function factura() 
+         {
+             // Tu lógica para manejar "facturas" aquí
+             return view('facturas.index');
          }
      
 }

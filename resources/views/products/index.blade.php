@@ -17,9 +17,9 @@
         <thead class="table-primary">
             <tr>
                 <th>#</th>
-                <th>Titulo</th>
+                <th>Código</th>
+                <th>Nombre</th>
                 <th>Precio</th>
-                <th>Codigo del producto</th>
                 <th>Descripcion</th>
                 <th>Accion</th>
             </tr>
@@ -29,15 +29,15 @@
                 @foreach($product as $rs)
                     <tr>
                         <td class="align-middle">{{ $loop->iteration }}</td>
+                        <td class="align-middle">{{ $rs->product_code }}</td>
                         <td class="align-middle">{{ $rs->title }}</td>
                         <td class="align-middle">{{ $rs->price }}</td>
-                        <td class="align-middle">{{ $rs->product_code }}</td>
                         <td class="align-middle">{{ $rs->description }}</td>  
                         <td class="align-middle">
                             <div class="btn-group" role="group" aria-label="Basic example">
                                 <a href="{{ route('products.show', $rs->id) }}" type="button" class="btn btn-secondary">Detalle</a>
                                 <a href="{{ route('products.edit', $rs->id)}}" type="button" class="btn btn-warning">Editar</a>
-                                <form action="{{ route('products.destroy', $rs->id) }}" method="POST" type="button" class="btn btn-danger p-0" onsubmit="return confirm('Delete?')">
+                                <form action="{{ route('products.destroy', $rs->id) }}" method="POST" type="button" class="btn btn-danger p-0" onsubmit="return confirm('Eliminar?')">
                                     @csrf
                                     @method('DELETE')
                                     <button class="btn btn-danger m-0">Eliminar</button>
@@ -48,7 +48,7 @@
                 @endforeach
             @else
                 <tr>
-                    <td class="text-center" colspan="5">Product not found</td>
+                    <td class="text-center" colspan="5">Producto no encontrado</td>
                 </tr>
             @endif
         </tbody>

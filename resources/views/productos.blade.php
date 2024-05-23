@@ -37,7 +37,7 @@
                   </table>
 
                   <a href="#" id="vaciar-carrito" class="button-vaciar">Vaciar Carrito</a>
-                  <a href="{{route('/carrito')}}" id="procesar-pedido" class="button-pedido">Procesar Compra</a>
+                  <a href="{{route('carrito')}}" id="procesar-pedido" class="button-pedido">Procesar Compra</a>
               </div>
             </li>
           </ul>
