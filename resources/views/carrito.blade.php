@@ -48,40 +48,64 @@
             <h2 class="titulo-principal">Carrito - Pedir con 2 días de antelación.</h2>
             <div class="contenedor-carrito">
             <style>
-        label {
-            display: block;
+        .form-group {
+            display: flex;
+            align-items: center;
             margin-bottom: 10px;
-            font-size: 14px;
-            color: #333333;
         }
-        input[type="email"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #cccccc;
-            border-radius: 5px;
-            font-size: 14px;
+
+        .form-group label {
+            width: 150px; /* Ajusta este valor según sea necesario */
+            margin-right: 10px;
         }
-        input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            background-color: #007BFF;
-            border: none;
-            border-radius: 5px;
-            color: white;
-            font-size: 14px;
-            cursor: pointer;
+
+        .form-group input {
+            flex: 1;
+            padding: 5px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
         }
-        input[type="submit"]:hover {
-            background-color: #0056b3;
+
+        .form-group input[type="date"],
+        .form-group input[type="time"],
+        .form-group input[type="email"],
+        .form-group input[type="text"] {
+            max-width: 200px; /* Ajusta el ancho según sea necesario */
         }
     </style>
                 <p id="carrito-vacio" class="carrito-vacio">Tu carrito está vacío. <i class="bi bi-emoji-frown"></i></p>
-                <form id="pedido-form" action="" method="POST">
+                <form id="pedido-form" action="{{ route('pedido.store') }}" method="POST">
         @csrf
-        <label for="email">Correo Electrónico:</label>
-        <input type="email" id="email" name="email" required>
-        </form>
+        <div class="form-group">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="nombre" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="correo" required>
+        </div>
+        <div class="form-group">
+            <label for="date">Fecha de Entrega:</label>
+            <input type="date" id="date" name="fechaEntrega" required>
+        </div>
+        <div class="form-group">
+            <label for="time">Hora de Recogida:</label>
+            <input type="time" id="time" name="horaRecogida" required>
+        </div>
+        <div class="form-group">
+            <label for="observaciones">Observaciones:</label>
+            <input type="text" id="observaciones" name="observaciones">
+        </div>
+    </form>
+    <script>
+        document.getElementById('carrito-acciones-comprar').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevenir el comportamiento predeterminado del botón
+            document.getElementById('pedido-form').reset(); // Limpiar el formulario
+            // Opcional: Redirigir después de limpiar el formulario
+            window.location.href = '{{ route("Notification") }}';
+        });
+    </script>
                 <div id="carrito-productos" class="carrito-productos disabled">
                     <!-- Esto se va a completar con el JS -->
                 </div>

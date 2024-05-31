@@ -31,8 +31,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('products.create', compact('products','topping'));
-        $topping = Topping::pluck('nombre', 'id');
+        return view('products.create');
     }
   
     /**

@@ -139,8 +139,9 @@ Route::middleware('auth')->group(function () {
     /*Route::get('/productos', [\App\Http\Controllers\productosController::class, 'index'])->name('productos');*/
     Route::get('/proveedores', [\App\Http\Controllers\ProveedorController::class, 'index'])->name('proveedores');
     /*Route::get('/tienda', [\App\Http\Controllers\tiendaController::class, 'index'])->name('tienda');*/
+    Route::get('/pedido', [\App\Http\Controllers\PedidoController::class, 'index'])->name('pedido');
     Route::get('/toppings', [\App\Http\Controllers\ToppingController::class, 'index'])->name('toppings');
-    Route::post('/pedir', [\App\Http\Controllers\CarritoController::class, 'store'])->name('carrito.store');
+    /*Route::post('/pedir', [\App\Http\Controllers\CarritoController::class, 'store'])->name('carrito.store');*/
 
 });
 

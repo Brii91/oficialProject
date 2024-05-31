@@ -39,12 +39,6 @@
     </div>
     <div class="row mb-3">
     <div class="col-md-6 mb-3">
-    <label for="metodoPago" class="form-label">Método de Pago</label>
-    <select name="metodoPago" id="metodoPago" class="form-control" required>
-        <option value="" disabled selected>Seleccionar método de pago</option>
-        <option value="Efectivo">Efectivo</option>
-        <option value="PayPal">PayPal</option>
-    </select>
 </div>
 
         <div class="col-md-6 mb-3">

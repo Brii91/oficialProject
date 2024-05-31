@@ -53,6 +53,12 @@
       <i class="fas fa-fw fa-tachometer-alt"></i>
       <span>Factura</span></a>
   </li>
+
+  <!-- <li class="nav-item">
+    <a class="nav-link" href="{{ route('pedido') }}">
+      <i class="fas fa-fw fa-tachometer-alt"></i>
+      <span>Pedidos</span></a>
+  </li> -->
   
   <!-- <li class="nav-item">
     <a class="nav-link" href="/profile">

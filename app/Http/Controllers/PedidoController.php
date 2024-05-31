@@ -50,7 +50,7 @@ class PedidoController extends Controller
      */
     public function edit(string $id)
     {
-        $pedidos = Pedidos::findOrFail($id);
+        $pedidos = Pedido::findOrFail($id);
   
         return view('pedidos.edit', compact('pedidos'));
     }

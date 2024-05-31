@@ -52,7 +52,7 @@
           <li><a class="nav-link scrollto" href="#estadisticas">Estadísticas</a></li>
           <li><a class="nav-link scrollto" href="#team">Equipo</a></li>
           <li><a class="nav-link scrollto" href="#faq">P.F</a></li>
-          <li><a class="nav-link scrollto" href="{{route('register')}}">Administrador</a></li>
+          <li><a class="nav-link scrollto" href="{{route('login')}}">Administrador</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

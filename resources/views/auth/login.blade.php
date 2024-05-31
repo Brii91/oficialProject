@@ -57,7 +57,7 @@
                   </form>
                   <hr>
                   <div class="text-center">
-                    <a class="small" href="{{ route('register') }}">¡Crea una cuenta!</a>
+                    <a class="small" href="{{ route('register') }}">¡!</a>
                   </div>
                 </div>
               </div>

@@ -9,12 +9,16 @@
         @csrf
         <div class="row mb-3">
             <div class="col-md-6 mb-3">
-                <label for="nombre" class="form-label">Nombre</label>
+                <label for="nombre" class="form-label">Nombre del cliente</label>
                 <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre" required>
             </div>
             <div class="col-md-6 mb-3">
                 <label for="Correo" class="form-label">Correo</label>
-                <input type="text" name="Correo" id="Correo" class="form-control" placeholder="Correo" required>
+                <input type="text" name="Correo" id="correo" class="form-control" placeholder="Correo" required>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="Telefono" class="form-label">Teléfono</label>
+                <input type="text" name="telefono" id="telefono" class="form-control" placeholder="Telefono" required>
             </div>
         </div>
         <div class="row mb-3">
