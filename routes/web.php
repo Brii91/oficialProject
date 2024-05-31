@@ -9,6 +9,9 @@ use App\Http\Controllers\ToppingController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\ProveedorController;
 use App\Http\Controllers\FacturaController;
+use App\Http\Controllers\PedidoController;
+use App\Http\Controllers\tiendaController;
+use App\Mail\Notification;
 
 
 /*
@@ -25,6 +28,13 @@ use App\Http\Controllers\FacturaController;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('Email', function () {
+    Mail::to('britneypolanco19@gmail.com')
+    ->send(new App\Mail\Notification);
+
+    return "Mensaje enviado";
+})->name('Notification');
 
 Route::controller(AuthController::class)->group(function () {
     Route::get('register', 'register')->name('register');
@@ -100,25 +110,52 @@ Route::middleware('auth')->group(function () {
         Route::put('edit/{id}', 'update')->name('facturas.update');
         Route::delete('destroy/{id}', 'destroy')->name('facturas.destroy');
     });
+
+    Route::controller(PedidoController::class)->prefix('pedido')->group(function () {
+        Route::get('', 'index')->name('pedido');
+        Route::get('create', 'create')->name('pedido.create');
+        Route::post('store', 'store')->name('pedido.store');
+        Route::get('show/{id}', 'show')->name('pedido.show');
+        Route::get('edit/{id}', 'edit')->name('pedido.edit');
+        Route::put('edit/{id}', 'update')->name('pedido.update');
+        Route::delete('destroy/{id}', 'destroy')->name('pedido.destroy');
+    });
  
     Route::get('/profile', [App\Http\Controllers\AuthController::class, 'profile'])->name('profile');
 
-Route::get('/form', [\App\Http\Controllers\FormController::class, 'index'])->name('form');
-Route::get('/tienda', [\App\Http\Controllers\tiendaController::class, 'index'])->name('tienda');
-Route::get('auth/register', [\App\Http\Controllers\AuthController::class, 'register'])->name('register');
-Route::get('/productos', [\App\Http\Controllers\productosController::class, 'index'])->name('productos');
-Route::get('/products', [\App\Http\Controllers\ProductController::class, 'index'])->name('products');
-Route::get('/empleados', [\App\Http\Controllers\EmpleadoController::class, 'index'])->name('empleados');
-Route::get('/carrito', [\App\Http\Controllers\CarritoController::class, 'index'])->name('carrito');
-Route::post('carrito', 'CarritoController@store');
-Route::get('/toppings', [\App\Http\Controllers\ToppingController::class, 'index'])->name('toppings');
-Route::get('/clientes', [\App\Http\Controllers\ClienteController::class, 'index'])->name('clientes');
-Route::get('/proveedores', [\App\Http\Controllers\ProveedorController::class, 'index'])->name('proveedores');
-Route::get('/facturas', [\App\Http\Controllers\FacturaController::class, 'index'])->name('facturas');
+    Route::get('facturas/pdf', [FacturaController::class, 'pdf'])->name('facturas.pdf');
+    Route::get('clientes/pdf', [ClienteController::class, 'pdf'])->name('clientes.pdf');
+    Route::get('products/pdf', [ProductController::class, 'pdf'])->name('products.pdf');
+    Route::get('empleados/pdf', [EmpleadoController::class, 'pdf'])->name('empleados.pdf');
+    Route::get('proveedores/pdf', [ProveedorController::class, 'pdf'])->name('proveedores.pdf');
 
+    /*Route::get('/auth/register', [\App\Http\Controllers\AuthController::class, 'register'])->name('register');*/
+    /*Route::get('/carrito', [\App\Http\Controllers\CarritoController::class, 'index'])->name('carrito');*/
+    Route::post('/pedido', [\App\Http\Controllers\PedidoController::class, 'store'])->name('pedido');
+    Route::get('/clientes', [\App\Http\Controllers\ClienteController::class, 'index'])->name('clientes');
+    Route::get('/empleados', [\App\Http\Controllers\EmpleadoController::class, 'index'])->name('empleados');
+    Route::get('/facturas', [\App\Http\Controllers\FacturaController::class, 'index'])->name('facturas');
+    Route::get('/form', [\App\Http\Controllers\FormController::class, 'index'])->name('form');
+    /*Route::get('/productos', [\App\Http\Controllers\productosController::class, 'index'])->name('productos');*/
+    Route::get('/proveedores', [\App\Http\Controllers\ProveedorController::class, 'index'])->name('proveedores');
+    /*Route::get('/tienda', [\App\Http\Controllers\tiendaController::class, 'index'])->name('tienda');*/
+    Route::get('/toppings', [\App\Http\Controllers\ToppingController::class, 'index'])->name('toppings');
+    Route::post('/pedir', [\App\Http\Controllers\CarritoController::class, 'store'])->name('carrito.store');
 
 });
 
+Route::get('/Tienda', function () {
+    return view('tienda');
+})->name('tienda');
 
+Route::get('/Productos', function () {
+    return view('productos');
+})->name('productos');
 
+Route::get('/auth/register', function () {
+    return view('auth/register');
+})->name('register');
 
+Route::get('/carrito', function () {
+    return view('carrito');
+})->name('carrito');

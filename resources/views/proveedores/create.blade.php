@@ -9,8 +9,8 @@
         @csrf
         <div class="row mb-3">
             <div class="col-md-6 mb-3">
-                <label for="nombre" class="form-label">Nombre</label>
-                <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre" required>
+                <label for="cliente" class="form-label">Cliente</label>
+                <input type="text" name="cliente" id="cliente" class="form-control" placeholder="Cliente" required>
             </div>
             <div class="col-md-6 mb-3">
                 <label for="direccion" class="form-label">Dirección</label>

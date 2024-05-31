@@ -1,0 +1,122 @@
+[
+    {
+        "id": "abrigo-01",
+        "titulo": "Combo de una decena de donas con frutos secos y glaseado de vainilla.",
+        "imagen": "./img/imgtienda/Dona1.jpeg",
+        "categoria": {
+            "nombre": "Abrigos",
+            "id": "abrigos"
+        },
+        "precio": 300
+    },
+    {
+        "id": "abrigo-02",
+        "titulo": "Combo de una docena de donas rellenas de crema chantillí y glaseado de chocolate con azúcar glass.",
+        "imagen": "./img/imgtienda/Dona2.jpeg",
+        "categoria": {
+            "nombre": "Abrigos",
+            "id": "abrigos"
+        },
+        "precio": 315
+    },
+    {
+        "id": "abrigo-03",
+        "titulo": "Combo de una docena de donas rellenas de Nutella y azúcar glass.",
+        "imagen": "./img/imgtienda/Dona3.jpeg",
+        "categoria": {
+            "nombre": "Abrigos",
+            "id": "abrigos"
+        },
+        "precio": 225
+    },
+    {
+        "id": "abrigo-04",
+        "titulo": "Combo de una decena de donas de fresas con relleno de vainilla y trocitos de fresas.",
+        "imagen": "./img/imgtienda/Dona4.jpeg",
+        "categoria": {
+            "nombre": "Abrigos",
+            "id": "abrigos"
+        },
+        "precio": 300
+    },
+    {
+        "id": "abrigo-05",
+        "titulo": "Piscina fresh - combo de una decena de donas en forma de piscina rellena de fresas.",
+        "imagen": "./img/imgtienda/Dona5.jpeg",
+        "categoria": {
+            "nombre": "Abrigos",
+            "id": "abrigos"
+        },
+        "precio": 250
+    },
+    {
+        "id": "camiseta-01",
+        "titulo": "Combo de una docena de donas con glaseado de vainilla y topping nueces molidas.",
+        "imagen": "./img/imgtienda/blanca.jpg",
+        "categoria": {
+            "nombre": "Camisetas",
+            "id": "camisetas"
+        },
+        "precio": 300
+    },
+    {
+        "id": "camiseta-02",
+        "titulo": "Combo de una docena de donas con topping de azúcar glass.",
+        "imagen": "./img/imgtienda/coconut.jpg",
+        "categoria": {
+            "nombre": "Camisetas",
+            "id": "camisetas"
+        },
+        "precio": 215
+    },
+    {
+        "id": "camiseta-03",
+        "titulo": "Combo de una docena de donas con glaseado de chocolate.",
+        "imagen": "./img/imgtienda/Donachocolate.jpg",
+        "categoria": {
+            "nombre": "Camisetas",
+            "id": "camisetas"
+        },
+        "precio": 200
+    },
+    {
+        "id": "camiseta-04",
+        "titulo": "Combo de una decena de donas con glaseado de caramelo y topping de maní triturado.",
+        "imagen": "./img/imgtienda/donaconalmendra.jpg",
+        "categoria": {
+            "nombre": "Camisetas",
+            "id": "camisetas"
+        },
+        "precio": 210
+    },
+    {
+        "id": "camiseta-05",
+        "titulo": "Combo de una docena de donas con glaseados de chocolate y vainilla y topping de chispas de colores",
+        "imagen": "./img/imgtienda/donaconchispitas.jpg",
+        "categoria": {
+            "nombre": "Camisetas",
+            "id": "camisetas"
+        },
+        "precio": 200
+    },
+    {
+        "id": "camiseta-06",
+        "titulo": "Combo de una decena de donas con glaseado de vainilla con topping de galletas Oreo trituradas.",
+        "imagen": "./img/imgtienda/donaconoreo.jpg",
+        "categoria": {
+            "nombre": "Camisetas",
+            "id": "camisetas"
+        },
+        "precio": 230
+    },
+    {
+        "id": "camiseta-07",
+        "titulo": "Combo de una docena de donas con glaseado de chocolate con topping de malvaviscos.",
+        "imagen": "./img/imgtienda/donamalvada.jpg",
+        "categoria": {
+            "nombre": "Camisetas",
+            "id": "camisetas"
+        },
+        "precio": 225
+    }
+]

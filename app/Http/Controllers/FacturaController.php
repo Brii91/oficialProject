@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Factura;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 
 class FacturaController extends Controller
@@ -16,6 +17,12 @@ class FacturaController extends Controller
         $factura = Factura::orderBy('created_at', 'DESC')->get();
   
         return view('facturas.index', compact('factura'));
+    }
+
+    public function pdf(){
+        $facturas=Factura::all(); 
+        $pdf = Pdf::loadView('facturas.pdf', compact('facturas'));
+        return $pdf->stream();
     }
   
     /**

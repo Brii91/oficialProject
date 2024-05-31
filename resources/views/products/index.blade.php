@@ -6,6 +6,8 @@
     <div class="d-flex align-items-center justify-content-between">
         <h1 class="mb-0">Lista de Productos</h1>
         <a href="{{ route('products.create') }}" class="btn btn-primary">Añadir producto</a>
+        <a href="{{ route('products.pdf') }}" class="btn btn-primary">Reporte</a>
+
     </div>
     <hr />
     @if(Session::has('success'))
@@ -19,6 +21,7 @@
                 <th>#</th>
                 <th>Código</th>
                 <th>Nombre</th>
+                <th>Topping</th>
                 <th>Precio</th>
                 <th>Descripcion</th>
                 <th>Accion</th>
@@ -31,8 +34,10 @@
                         <td class="align-middle">{{ $loop->iteration }}</td>
                         <td class="align-middle">{{ $rs->product_code }}</td>
                         <td class="align-middle">{{ $rs->title }}</td>
+                        <td class="align-middle">{{ $rs->topping }}</td>
                         <td class="align-middle">{{ $rs->price }}</td>
                         <td class="align-middle">{{ $rs->description }}</td>  
+                        
                         <td class="align-middle">
                             <div class="btn-group" role="group" aria-label="Basic example">
                                 <a href="{{ route('products.show', $rs->id) }}" type="button" class="btn btn-secondary">Detalle</a>

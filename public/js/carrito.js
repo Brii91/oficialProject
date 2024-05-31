@@ -12,7 +12,7 @@ class Carrito{
     leerDatosProducto(producto){
         const infoProducto ={
             imagen : producto.querySelector('img').src,
-            titulo : producto.querySelector('h5').textContent,
+            titulo : producto.querySelector('h4').textContent,
             precio : producto.querySelector('.precio').textContent,
             id : producto.querySelector('a').getAttribute('data-id'),
             cantidad : 1
@@ -28,7 +28,7 @@ class Carrito{
             //console.log('El producto ya está agregado');
             Swal.fire({
                 icon: 'warning',
-                title: 'No tenemos stock suficiente, prueba con menos unidades',
+                title: 'En procesar compra podrás agregar la cantidad de desees.',
                 timer: 2500,
                 showConfirmButton: false
             })
@@ -180,7 +180,7 @@ class Carrito{
             })
         }
         else{
-            location.href="carrito.html";
+            location.href="carrito";
         }
     }
 
@@ -195,9 +195,9 @@ class Carrito{
         igv = parseFloat(total * 0.18).toFixed(2);
         subtotal = parseFloat(total-igv).toFixed(2);
 
-        document.getElementById('subtotal').innerHTML = "S/. " + subtotal;
-        document.getElementById('igv').innerHTML = "S/. " + igv;
-        document.getElementById('total').value = "S/. " + total.toFixed(2);
+        document.getElementById('subtotal').innerHTML = "RD$/. " + subtotal;
+        document.getElementById('igv').innerHTML = "RD$/. " + igv;
+        document.getElementById('total').value = "RD$/. " + total.toFixed(2);
     }
 
 }

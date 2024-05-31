@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Proveedor;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 
 class ProveedorController extends Controller
@@ -16,6 +17,12 @@ class ProveedorController extends Controller
         $proveedor = Proveedor::orderBy('created_at', 'DESC')->get();
   
         return view('proveedores.index', compact('proveedor'));
+    }
+
+    public function pdf(){
+        $proveedor=Proveedor::all(); 
+        $pdf = Pdf::loadView('proveedores.pdf', compact('proveedor'));
+        return $pdf->stream();
     }
   
     /**

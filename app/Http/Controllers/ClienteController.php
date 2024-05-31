@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Cliente;
+use Barryvdh\DomPDF\Facade\Pdf;
+
 
 
 class ClienteController extends Controller
@@ -18,6 +20,11 @@ class ClienteController extends Controller
         return view('clientes.index', compact('cliente'));
     }
   
+    public function pdf(){
+        $clientes=Cliente::all(); 
+        $pdf = Pdf::loadView('clientes.pdf', compact('clientes'));
+        return $pdf->stream();
+    }
     /**
      * Show the form for creating a new resource.
      */

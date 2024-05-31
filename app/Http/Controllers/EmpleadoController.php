@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
   
 use Illuminate\Http\Request;
 use App\Models\Empleado;
- 
+use Barryvdh\DomPDF\Facade\Pdf;
+
 class EmpleadoController extends Controller
 {
     /**
@@ -14,6 +15,12 @@ public function index()
 {
     $empleados = Empleado::orderBy('created_at', 'DESC')->get(); 
     return view('empleados.index', compact('empleados'));       
+}
+
+public function pdf(){
+    $empleados=Empleado::all(); 
+    $pdf = Pdf::loadView('empleados.pdf', compact('empleados'));
+    return $pdf->stream();
 }
 
 

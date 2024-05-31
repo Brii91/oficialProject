@@ -8,31 +8,29 @@
     <form action="{{ route('clientes.update', $cliente->id) }}" method="POST">
         @csrf
         @method('PUT')
-        <div class="row">
-            <div class="col mb-3">
-                <label class="form-label">DNI</label>
-                <input type="text" name="dni" class="form-control" placeholder="DNI" value="{{ $cliente->dni }}" >
-            </div>
-            <div class="col mb-3">
+        <div class="row mb-3">
+            <div class="col-md-6 mb-3">
                 <label class="form-label">Nombre</label>
-                <input type="text" name="nombre" class="form-control" placeholder="Nombre" value="{{ $cliente->nombre }}" >
+                <input type="text" name="nombre" class="form-control" placeholder="Nombre" value="{{ $cliente->nombre }}">
             </div>
-            <div class="col mb-3">
+            <div class="col-md-6 mb-3">
                 <label class="form-label">Apellido</label>
-                <input type="text" name="apellido" class="form-control" placeholder="Apellido" value="{{ $cliente->apellido }}" >
+                <input type="text" name="apellido" class="form-control" placeholder="Apellido" value="{{ $cliente->apellido }}">
             </div>
-            <div class="col mb-3">
-                <label class="form-label">Telefono</label>
-                <input type="text" name="telefono" class="form-control" placeholder="Telefono" value="{{ $cliente->telefono }}" >
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Teléfono</label>
+                <input type="text" name="telefono" class="form-control" placeholder="Teléfono" value="{{ $cliente->telefono }}">
             </div>
-            <div class="col mb-3">
+            <div class="col-md-6 mb-3">
                 <label class="form-label">Correo</label>
-                <input type="text" name="correo" class="form-control" placeholder="Correo" value="{{ $cliente->correo }}" >
+                <input type="email" name="correo" class="form-control" placeholder="Correo" value="{{ $cliente->correo }}">
             </div>
         </div>
         <div class="row">
             <div class="d-grid">
-                <button class="btn btn-warning">Actualizar</button>
+                <button type="submit" class="btn btn-warning">Actualizar</button>
             </div>
         </div>
     </form>

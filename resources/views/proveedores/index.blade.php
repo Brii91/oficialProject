@@ -6,6 +6,8 @@
     <div class="d-flex align-items-center justify-content-between">
         <h1 class="mb-0">Lista de proveedores</h1>
         <a href="{{ route('proveedores.create') }}" class="btn btn-primary">Añadir proveedor</a>
+        <a href="{{ route('proveedores.pdf') }}" class="btn btn-primary">Reporte</a>
+
     </div>
     <hr />
     @if(Session::has('success'))

@@ -9,6 +9,10 @@ class Product extends Model
 {
     use HasFactory;
 
+    public function topping(){
+return $this->belongsTo(Topping::class.'nombre');
+    }
+
     protected $fillable = [
         'title',
         'price',

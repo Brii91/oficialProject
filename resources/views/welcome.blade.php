@@ -52,7 +52,7 @@
           <li><a class="nav-link scrollto" href="#estadisticas">Estadísticas</a></li>
           <li><a class="nav-link scrollto" href="#team">Equipo</a></li>
           <li><a class="nav-link scrollto" href="#faq">P.F</a></li>
-          <li><a class="nav-link scrollto" href="{{route('register')}}">Regístrate</a></li>
+          <li><a class="nav-link scrollto" href="{{route('register')}}">Administrador</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -625,7 +625,6 @@
 <!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-  <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
   <script src="vendor/purecounter/purecounter_vanilla.js"></script>

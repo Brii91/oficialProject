@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
   
 use Illuminate\Http\Request;
 use App\Models\Product;
- 
+use App\Models\Topping;
+
+use Barryvdh\DomPDF\Facade\Pdf;
+
 class ProductController extends Controller
 {
     /**
@@ -16,13 +19,20 @@ class ProductController extends Controller
   
         return view('products.index', compact('product'));
     }
+
+    public function pdf(){
+        $product=Product::all(); 
+        $pdf = Pdf::loadView('products.pdf', compact('product'));
+        return $pdf->stream();
+    }
   
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-        return view('products.create');
+        return view('products.create', compact('products','topping'));
+        $topping = Topping::pluck('nombre', 'id');
     }
   
     /**

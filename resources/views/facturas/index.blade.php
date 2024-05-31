@@ -6,6 +6,8 @@
     <div class="d-flex align-items-center justify-content-between">
         <h1 class="mb-0">Lista de factura</h1>
         <a href="{{ route('facturas.create') }}" class="btn btn-primary">Añadir factura</a>
+        <a href="{{ route('facturas.pdf') }}" class="btn btn-primary">Reporte</a>
+
     </div>
     <hr />
     @if(Session::has('success'))

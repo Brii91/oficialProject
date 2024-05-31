@@ -39,7 +39,7 @@
       <ul class="sci">
         <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
         <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
-        <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        <li><a href="https://www.instagram.com/tasty_donutts/"><ion-icon name="logo-instagram"></ion-icon></a></li>
       </ul>
       
     </div>

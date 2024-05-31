@@ -6,6 +6,8 @@
     <div class="d-flex align-items-center justify-content-between">
         <h1 class="mb-0">Lista de clientes</h1>
         <a href="{{ route('clientes.create') }}" class="btn btn-primary">Añadir cliente</a>
+        <a href="{{ route('clientes.pdf') }}" class="btn btn-primary">Reporte</a>
+
     </div>
     <hr />
     @if(Session::has('success'))
@@ -17,12 +19,11 @@
         <thead class="table-primary">
             <tr>
                 <th>#</th>
-                <th>DNI</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
-                <th>Telefono</th>
+                <th>Teléfono</th>
                 <th>Correo</th>
-                <th>Accion</th>
+                <th>Acción</th>
 
             </tr>
         </thead>
@@ -31,7 +32,6 @@
                 @foreach($cliente as $rs)
                     <tr>
                         <td class="align-middle">{{ $loop->iteration }}</td>
-                        <td class="align-middle">{{ $rs->DNI }}</td>
                         <td class="align-middle">{{ $rs->nombre }}</td> 
                         <td class="align-middle">{{ $rs->apellido }}</td> 
                         <td class="align-middle">{{ $rs->telefono }}</td> 

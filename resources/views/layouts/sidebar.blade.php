@@ -21,7 +21,7 @@
   <li class="nav-item">
     <a class="nav-link" href="{{ route('clientes') }}">
       <i class="fas fa-fw fa-tachometer-alt"></i>
-      <span>Cliente</span></a>
+      <span>Clientes</span></a>
   </li>
 
   <li class="nav-item">
@@ -54,11 +54,11 @@
       <span>Factura</span></a>
   </li>
   
-  <li class="nav-item">
+  <!-- <li class="nav-item">
     <a class="nav-link" href="/profile">
       <i class="fas fa-fw fa-tachometer-alt"></i>
       <span>Perfil</span></a>
-  </li>
+  </li> -->
   
   <!-- Divider -->
   <hr class="sidebar-divider d-none d-md-block">

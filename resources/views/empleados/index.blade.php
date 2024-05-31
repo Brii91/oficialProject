@@ -6,6 +6,8 @@
     <div class="d-flex align-items-center justify-content-between">
         <h1 class="mb-0">Lista de empleados</h1>
         <a href="{{ route('empleados.create') }}" class="btn btn-primary">Agregar empleado</a>
+        <a href="{{ route('empleados.pdf') }}" class="btn btn-primary">Reporte</a>
+
     </div>
     <hr />
     @if(Session::has('success'))
@@ -20,10 +22,10 @@
                 <th>Nombres</th>
                 <th>Apellidos</th>
                 <th>Sexo</th>
-                <th>Cedula</th>
+                <th>Cédula</th>
                 <th>Correo</th>
-                <th>Telefono</th>
-                <th>Accion</th>
+                <th>Teléfono</th>
+                <th>Acción</th>
             </tr>
         </thead>
         <tbody>+
@@ -41,12 +43,12 @@
  
                         <td class="align-middle">
                             <div class="btn-group" role="group" aria-label="Basic example">
-                                <a href="{{ route('empleados.show', $rs->id) }}" type="button" class="btn btn-secondary">Detail</a>
-                                <a href="{{ route('empleados.edit', $rs->id)}}" type="button" class="btn btn-warning">Edit</a>
-                                <form action="{{ route('empleados.destroy', $rs->id) }}" method="POST" type="button" class="btn btn-danger p-0" onsubmit="return confirm('Delete?')">
+                                <a href="{{ route('empleados.show', $rs->id) }}" type="button" class="btn btn-secondary">Detalle</a>
+                                <a href="{{ route('empleados.edit', $rs->id)}}" type="button" class="btn btn-warning">Editar</a>
+                                <form action="{{ route('empleados.destroy', $rs->id) }}" method="POST" type="button" class="btn btn-danger p-0" onsubmit="return confirm('Eliminar?')">
                                     @csrf
                                     @method('DELETE')
-                                    <button class="btn btn-danger m-0">Delete</button>
+                                    <button class="btn btn-danger m-0">Eliminar</button>
                                 </form>
                             </div>
                         </td>

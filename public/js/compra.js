@@ -24,10 +24,10 @@ function procesarCompra(e){
             timer: 2500,
             showConfirmButton: false
           }).then(function(){
-              window.location = "productos.html";
+              window.location = "{{route('productos')}}";
           })
     }
-    else if(cliente.value === '' || correo.value === ''){
+    else if(cliente.value === '' || correo.value === '' || telefono.value === '' || fecha_entrega.value === '' || hora_recogida.value === '' || observaciones.value === ''){
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
@@ -45,14 +45,6 @@ function procesarCompra(e){
         .addEventListener('submit', function(event) {
         event.preventDefault();
 
-            const cargandoGif = document.querySelector('#cargando');
-            cargandoGif.style.display='block';
-
-            const enviado = document.createElement('img');
-            enviado.src = 'assets/img/mail.gif';
-            enviado.style.display = 'block';
-            enviado.width = '150';
-
         const serviceID = 'default_service';
         const templateID = 'template_rtfpoq5';
 
@@ -64,12 +56,9 @@ function procesarCompra(e){
                     setTimeout(() => {
                         enviado.remove();
                         compra.vaciarLocalStorage();
-                        window.location = "productos.html";
+                        window.location = "{{route('productos')}}";
                     }, 2500);
 
-            }, (err) => {
-            btn.value = 'Send Email';
-            alert(JSON.stringify(err));
             });
         });
 
